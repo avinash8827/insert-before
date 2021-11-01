@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>OKLABS Students</h1>
+        <ul id="myfriend">
+            <li>Avinash</li>
+            <li>rohit</li>
+            <li>abhishek</li>
+            
+        </ul>
+        <button onclick="addNewStudent(abhi)">Add New Student</button>
+        <script>
+            function addNewStudent(abhi){
+                var nsn = prompt("Enter new student name");
+                console.log(nsn);
+                l = document.createElement('li');
+                console.log(l);
+                l.innerHTML = nsn;
+
+
+
+
+                var x = document.getElementById("myfriend");
+                console.log(x.childNodes);
+                console.log(x.childNodes[1]);     
+                x.insertBefore(l, document.querySelector('#myfriend > li:first-child')
+            }
+            
+           
+
+        </script>
+    </body>
+</html>

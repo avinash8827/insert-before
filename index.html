@@ -1,52 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>insert before</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>My friends name</h1>
-    <ul id="myfriends">
+    <h1>New Friend</h1>
+    <ul id="myfriend">
         <li>Avinash chouhan</li>
         <li>Abhishek</li>
-    </ul>    
-        <button onclick="addNewFriend">add new friends</button>
-        <script>
+        
+    </ul>
+    <button onclick="addNewFriend()">Add New Student</button>
+    <script>           
             var friends = [];
-            //funcation defination
-            function addNewFriend(friname){
-                console.log(friname)
-                //funtion body
-                var fn = prompt ('enter your friend name');
-                console.log(fn);
 
-                var isAvailble = false;
-                isAvailble = friends.find(function(currentValue, index, arr){
-                    if(currentValue === fn){
-                        return true;
-                    }else{
-                        return false;
-                    }
-                });
-                if(!isAvailable){
-                    friends.push(fn);
-                    l = document.createElement('li');
-                    l.innerHTML = fn;
 
-                    console.log(l);
-                    var x = document.getElementById("myfriends");
-                    console.log(x.childNodes);
-                 console.log(x.childNodes[1]);
 
-                }
-                 x.insertBefore(l, document.querySelector('#myfriends > li:first-child') );
-            }
-           
-            var l; 
+            function addNewFriend(){
 
-        </script>
-    
+
+
+            console.log(friends);
+
+
+            var fn = prompt("Enter your friend name");
+
+
+
+            var avilaible = false;
+
+
+            avilaible = friends.find(function(currentvalue,index,arr){
+
+
+            return (currentvalue === nsn)?true:false;
+
+
+            });
+            if( avilaible){
+            }else{
+            friends.push(fn);
+            console.log(fn);
+            l = document.createElement('li');
+
+
+            console.log(l);
+            l.innerHTML = fn;
+
+
+            var x = document.getElementById("myfriend");
+            console.log(x.childNodes[1]);     
+            x.insertBefore(l, document.querySelector('#myfriend > li:first-child') )
+            }      
+        }
+    </script>
 </body>
-</html>         
+</html>

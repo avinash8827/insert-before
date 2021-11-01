@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert before</title>
+</head>
+<body>
+    <h1>My friends name</h1>
+    <ul id="myfriends">
+        <li>Avinash chouhan</li>
+        <li>Abhishek</li>
+    </ul>    
+        <button onclick="addNewFriend">add new friends</button>
+        <script>
+            var friends = [];
+            //funcation defination
+            function addNewFriend(friname){
+                console.log(friname)
+                //funtion body
+                var fn = prompt ('enter your friend name');
+                console.log(fn);
+
+                var isAvailble = false;
+                isAvailble = friends.find(function(currentValue, index, arr){
+                    if(currentValue === fn){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                });
+                if(!isAvailable){
+                    friends.push(fn);
+                    l = document.createElement('li');
+                    l.innerHTML = fn;
+
+                    console.log(l);
+                    var x = document.getElementById("myfriends");
+                    console.log(x.childNodes);
+                 console.log(x.childNodes[1]);
+
+                }
+                 x.insertBefore(l, document.querySelector('#myfriends > li:first-child') );
+            }
+           
+            var l; 
+
+        </script>
+    
+</body>
+</html>         
